@@ -20,12 +20,14 @@
       </div>
       <div class="column"></div>
     </div>
+    <span style="color:red">{{tagErrorMessage}}</span>
   </section>
 
   <div class="buttons" style="justify-content: center;">
     <button class="button is-primary" @click="sendHashtag">Search</button>
   </div>
 
+  <div class="search-result"></div>
   <!--
   <div class="buttons">
     <button class="button is-info">Info</button>

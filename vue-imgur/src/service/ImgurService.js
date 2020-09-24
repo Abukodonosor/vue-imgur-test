@@ -19,6 +19,9 @@ function ImgurService() {
   }
 
   function galleryItemsDTOMapper(response) {
+    if (response.data.items === undefined) {
+      return null;
+    }
     const itemsForTopic = response.data.items.map((el) => {
       return {
         title: el.title,

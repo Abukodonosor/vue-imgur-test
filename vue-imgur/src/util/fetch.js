@@ -6,14 +6,12 @@ export function GetFetch(url, headers) {
       cache: "no-cache",
       headers: headers || {
         "Content-Type": "application/json",
-        Authorization: "Bearer df4d707146d8d93d14615baf56ee2ee59408f19a",
       },
       redirect: "follow",
       //   body: JSON.stringify(data),
     })
       .then((response) => response.json())
       .then((data) => {
-        console.log(data);
         resolve(data);
       })
       .catch((err) => {
