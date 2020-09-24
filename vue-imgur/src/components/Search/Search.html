@@ -1,0 +1,36 @@
+<div id="search" class="container is-widescreen">
+  <!-- <div> -->
+  <br />
+  <br />
+  <br />
+  <section class="section">
+    <div class="columns">
+      <div class="column"></div>
+      <div class="column is-three-quarters">
+        <div class="field">
+          <div class="control">
+            <input
+              class="input is-primary"
+              type="text"
+              :placeholder="placeholder"
+              v-model.lazy="searchText"
+            />
+          </div>
+        </div>
+      </div>
+      <div class="column"></div>
+    </div>
+  </section>
+
+  <div class="buttons" style="justify-content: center;">
+    <button class="button is-primary" @click="sendHashtag">Search</button>
+  </div>
+
+  <!--
+  <div class="buttons">
+    <button class="button is-info">Info</button>
+    <button class="button is-success">Success</button>
+    <button class="button is-warning">Warning</button>
+    <button class="button is-danger">Danger</button>
+  </div> -->
+</div>
