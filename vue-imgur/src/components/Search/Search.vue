@@ -12,6 +12,7 @@ export default {
     return {
       searchText: "",
       tagErrorMessage: "",
+      hashTagSearchItems: null,
     };
   },
   methods: {
@@ -23,11 +24,10 @@ export default {
       if (result === null) {
         this.tagErrorMessage = "Please insert the valid tag!";
       }
-      console.log(result);
-      this.update();
+      this.update(result);
     },
-    update: function () {
-      console.log("ja");
+    update: function (result) {
+      this.hashTagSearchItems = result;
     },
   },
 };

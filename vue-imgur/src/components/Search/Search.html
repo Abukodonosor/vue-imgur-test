@@ -1,5 +1,4 @@
 <div id="search" class="container is-widescreen">
-  <!-- <div> -->
   <br />
   <br />
   <br />
@@ -27,12 +26,22 @@
     <button class="button is-primary" @click="sendHashtag">Search</button>
   </div>
 
-  <div class="search-result"></div>
-  <!--
-  <div class="buttons">
-    <button class="button is-info">Info</button>
-    <button class="button is-success">Success</button>
-    <button class="button is-warning">Warning</button>
-    <button class="button is-danger">Danger</button>
-  </div> -->
+  <div class="columns is-mobile is-multiline is-centered">
+    <div class="column is-narrow" v-for="(item, index) in hashTagSearchItems">
+      <a :href="item.link" target="_blank">
+      <div class="result-item">
+        <p class="bd-notification is-primary">
+          <h3>
+              {{ item.title }}
+          </h3> <br/>
+          <img style="width:180px;height:150px;" :src="item.images" alt="no image"/>
+          <p>
+            <!-- {{ item.description }} -->
+          </p>
+        </p>
+      </div>
+    </a>
+    </div>
+    
+  </div>
 </div>
